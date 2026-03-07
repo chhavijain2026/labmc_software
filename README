@@ -1,0 +1,35 @@
+		The labmc software
+		
+For the analysis of experimental rock deformation data.
+Created by Jun Korenaga, Yale University, in 2008.
+Modified in 2015 by Benjamin G. Mullet (Mullet et al., 2015).
+Further optimized in 2019 by Chhavi Jain (Jain et al., 2019).
+
+The labmc software is designed to perform nonlinear inversion of experimental
+data on the plastic deformation of mineral assemblages. It is based on a
+Markov chain Monte Carlo sampling technique.
+The software allows users to fit experimentally observed strain rates with a
+composite rheological model, i.e., a combination of different creep mechanisms,
+which is often a more realistic and physically meaningfulrheological model to
+explain the observed deformation than the assumption of a single creep mechanism.
+
+The tutorial explains the method for the installation and implementation of
+the software. Nine worked-out examples are provided (Cases S1-S9) with the
+requisite scripts to demonstrate the implementation of the code. MATLAB scripts
+are also provided to process the MCMC output.
+Refer to the following subplications to understand the MCMC inversion
+scheme implemented by the labmc software:
+
+Korenaga, J. and Karato, S.I., 2008. A new analysis of experimental data on
+olivine rheology. Journal of Geophysical Research: Solid Earth, 113(B2).
+
+Mullet, B.G., Korenaga, J. and Karato, S.I., 2015. Markov chain Monte Carlo
+inversion for the rheology of olivine single crystals. Journal of Geophysical
+Research: Solid Earth, 120(5), pp.3142-3172.
+
+Jain, C., Korenaga, J. and Karato, S.I., 2019. Global analysis of experimental
+data on the rheology of olivine aggregates. Journal of Geophysical Research:
+Solid Earth, 124(1), pp.310-334.
+
+Jain, C. and Korenaga, J. An open-source Markov chain Monte Carlo inversion
+software for the analysis of experimental rock deformation data (in prep., March 2026).

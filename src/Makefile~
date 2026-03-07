@@ -1,0 +1,30 @@
+# Makefile
+
+# for parallel implementation (with MPI)
+# comment for serial implementation
+CCC = /usr/local/bin/mpic++
+CC = /usr/local/bin/mpicc
+SRC_LABMC = main_parallel.cc parameter.cc flowlaw_new.cc state.cc statmodel.cc sm_mnbrak.cc sm_brent.cc gaussj.cc ran2.cc gasdev.cc util.cc error.cc
+
+## for serial implementation (no MPI)
+## comment for parallel implementation
+#CCC = /usr/bin/g++
+#CC = /usr/bin/gcc
+#SRC_LABMC = main_serial.cc parameter.cc flowlaw_new.cc state.cc statmodel.cc sm_mnbrak.cc sm_brent.cc gaussj.cc ran2.cc gasdev.cc util.cc error.cc
+
+CFLAGS = -ansi -O3
+HOME = ./
+BINDIR = ./
+PWD = ${HOME}
+INCLUDE = -I${PWD}
+
+OBJ_LABMC = ${SRC_LABMC:.cc=.o}
+
+.c.o: 
+	$(CCC) $(CFLAGS) -c  $< $(INCLUDE)
+.cc.o: 
+	$(CCC) $(CFLAGS) -c  $< $(INCLUDE)
+
+labmc: $(OBJ_LABMC)
+	$(CCC) $(CFLAGS) -o $@ $(OBJ_LABMC) -lm
+#	cp $@ $(BINDIR)

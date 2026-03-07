@@ -1,0 +1,5 @@
+Inversion (out.S4f..dat) of data (dataS4.noX.dat): correlations, means, std
+			p1		E1		log10A1		mean +/- std
+ p1		 1.000		 0.168		 0.988 		 2.010 +/-  0.100
+ E1		 0.168		 1.000		 0.160 		406.380 +/-  8.488
+log10A1		 0.988		 0.160		 1.000 		 9.372 +/-  0.094

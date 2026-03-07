@@ -1,0 +1,4 @@
+Inversion (out.S1f..dat) of data (dataS1.dat): correlations, means, std
+			p1		log10A1		mean +/- std
+ p1		 1.000		 0.988 		 1.889 +/-  0.088
+log10A1		 0.988		 1.000 		-4.699 +/-  0.087

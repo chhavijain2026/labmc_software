@@ -1,0 +1,4 @@
+Inversion (out.S3f..dat) of data (dataS3.noX.dat): correlations, means, std
+			p1		log10A1		mean +/- std
+ p1		 1.000		 0.989 		 2.228 +/-  0.101
+log10A1		 0.989		 1.000 		-4.385 +/-  0.098
