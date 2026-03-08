@@ -17,7 +17,7 @@ The tutorial explains the method for the installation and implementation of
 the software. Nine worked-out examples are provided (Cases S1-S9) with the
 requisite scripts to demonstrate the implementation of the code. MATLAB scripts
 are also provided to process the MCMC output.
-Refer to the following subplications to understand the MCMC inversion
+Refer to the following publications to understand the MCMC inversion
 scheme implemented by the labmc software:
 
 Korenaga, J. and Karato, S.I., 2008. A new analysis of experimental data on
