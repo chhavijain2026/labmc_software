@@ -18,10 +18,13 @@ R=8.314;
 k0 = 3.8e-9; %m2/s
 Eg = 160; %kJ/mol
 
+idir = 'input/';
+odir = 'output/';
+
 path = '../CaseS7/';
 fname = 'out.S7fs.resampled.dat';
 dataf = 'dataS7.dat';
-obs = load([path dataf]);
+obs = load([path idir dataf]);
 params = [{'p1'};{'n3'}]; % list of unknown params
 kn = 2; % 2 estimated flow-law parameters
 An = 2; % 2 estimated scaling coeff.
@@ -30,7 +33,7 @@ Xn = 0; % no inter-run bias
 
 %%%%%%%%%%%%%%%%%%%
 % MCMC output file
-outm = load([path fname]);
+outm = load([path odir fname]);
 
 % calculate scaling coefficients
 E1 = zeros(size(outm(:,4))); %E1=0

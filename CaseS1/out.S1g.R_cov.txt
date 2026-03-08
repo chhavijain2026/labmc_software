@@ -1,5 +1,0 @@
-Inversion (out.S1g..dat) of data (dataS1.dat): correlations, means, std
-			p5		n5		log10A5		mean +/- std
- p5		 1.000		 0.629		 0.309 		 1.881 +/-  0.108
- n5		 0.629		 1.000		-0.538 		 0.991 +/-  0.095
-log10A5		 0.309		-0.538		 1.000 		-4.696 +/-  0.099

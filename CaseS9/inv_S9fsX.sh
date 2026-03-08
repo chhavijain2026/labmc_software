@@ -2,7 +2,7 @@
 
 #set up execution
 set EXEC = ../src/labmc
-set dat = dataS9.dat
+set dat = input/dataS9.dat
 
 #foreach seed (0 1 2 3 4 5 6 7 8 9)
 foreach seed (0 1)
@@ -15,7 +15,7 @@ foreach seed (0 1)
    mpirun $EXEC -Di$dat -C5 -d1 -d2 -M1000000/$dn/300/100 -V -R$seed \
 	  -Pd0/0/1/10/-2/2/0/1000/-30/30 \
 	  -Pc0/0/-5/5/-2/2/0/1000/-30/30 \
-          > out.S9fsX.$seed.dat
+          > output/out.S9fsX.$seed.dat
     sleep 1
 end
 

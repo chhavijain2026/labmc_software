@@ -2,9 +2,9 @@
 
 #set up execution
 set EXEC = ../src/labmc
-set dat = dataS2.dat
+set dat = input/dataS2.dat
 
-set dat2 = dataS2.noX.dat
+set dat2 = input/dataS2.noX.dat
 awk '{ $NF=1; print }' $dat > $dat2
 
 #foreach seed (0 1 2 3 4 5 6 7 8 9)
@@ -17,7 +17,7 @@ foreach seed (0 1 2)
 
    $EXEC -Di$dat2 -d1 -M1000000/$dn/200/100 -V -R$seed \
 	  -Pa0/0/-5/5/0/1000/-30/30 \
-          > out.S2f.$seed.dat
+          > output/out.S2f.$seed.dat
     sleep 1
 end
 

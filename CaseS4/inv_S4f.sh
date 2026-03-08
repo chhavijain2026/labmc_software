@@ -2,8 +2,8 @@
 
 #set up execution
 EXEC=../src/labmc
-datorig=dataS4.dat
-dat=dataS4.noX.dat
+datorig=input/dataS4.dat
+dat=input/dataS4.noX.dat
 
 awk '{$NF=1; print }' $datorig > $dat
 
@@ -19,7 +19,7 @@ do
 
     $EXEC -Di$dat -d1 -M1000000/$dn/200/100 -V -R$seed \
 	   -Pa0/0/-5/5/0/1000/0/0 \
-	   > out.S4f.$seed.dat
+	   > output/out.S4f.$seed.dat
     sleep 1
 done
 

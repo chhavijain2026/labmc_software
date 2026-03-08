@@ -2,9 +2,9 @@
 
 #set up execution
 set EXEC = ../src/labmc 
-set dataorig = dataS6.dat
-set dat = dataS6.noX.dat
-#set InFn = out.S6s.0.dat
+set dataorig = input/dataS6.dat
+set dat = input/dataS6.noX.dat
+#set InFn = output/out.S6s.0.dat
 
 awk '{$NF=1; print }' $dataorig > $dat
 
@@ -18,11 +18,11 @@ foreach seed (0 1 2) #0
 
     $EXEC -Di$dat -d1 -M1000000/$dn/200/100 -V -R$seed \
 	  -Pb0/0/1/5/0/1000/-30/30 \
-          > out.S6s.$seed.dat
+          > output/out.S6s.$seed.dat
 
 #    $EXEC -Di$dat -d1 -M1000000/$dn/200/100 -V -R$seed \
 #	  -Pb0/0/1/5/0/1000/-30/30 \
-#          -I$InFn >> out.S6s.$seed.dat
+#          -I$InFn >> output/out.S6s.$seed.dat
 
     sleep 1
 end

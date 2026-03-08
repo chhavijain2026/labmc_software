@@ -2,9 +2,9 @@
 
 #set up execution
 set EXEC = ../src/labmc
-set dat = dataS7.dat
+set dat = input/dataS7.dat
 
-set newRuns = newrunsS7.dat
+set newRuns = input/newrunsS7.dat
 awk 'BEGIN { for(i=1;i<=4;i++) for(j=1;j<=8;j++) print i }' > $newRuns
 
 #foreach seed (0 1 2 3 4 5 6 7 8 9)
@@ -19,7 +19,7 @@ foreach seed (0) # 1 2)
 	  -Pa0/0/-5/5/0/0/0/0 \
 	  -Pb0/0/-5/5/0/0/0/0 \
 	  -B$newRuns \
-          > out.S7fs.$seed.dat
+          > output/out.S7fs.$seed.dat
 
     sleep 1
 

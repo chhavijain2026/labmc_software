@@ -2,7 +2,7 @@
 
 #set up execution
 set EXEC = ../src/labmc
-set dat = dataS7.dat
+set dat = input/dataS7.dat
 
 #foreach seed (0 1 2 3 4 5 6 7 8 9)
 foreach seed (0)
@@ -14,7 +14,7 @@ foreach seed (0)
 
     $EXEC -Di$dat -d1 -M1000000/$dn/200/100 -V -R$seed \
 	  -Pa0/0/-5/5/0/0/0/0 \
-          > out.S7f.$seed.dat
+          > output/out.S7f.$seed.dat
 
     sleep 1
 

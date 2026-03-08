@@ -15,95 +15,101 @@
 clear
 clc
 
-path = '../CaseS1/'; 
-para = [{'p5'};{'n5'}];
-kn=2;
-fname = ['out.S1g.0'];
-tstr = 'S1g';
+odir = 'output/';
 
-path = '../CaseS1/'; 
-para = [{'p1'}];
-kn=1;
-fname = ['out.S1f.0'];
-tstr = 'S1f';
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Uncomment the Case under consideration.
+% Comment the rest
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%path = '../CaseS1/'; 
+%para = [{'p5'};{'n5'}];
+%kn=2;
+%fname = ['out.S1g.0'];
+%tstr = 'S1g';
 
-path = '../CaseS2/'; 
-para = [{'p1'};{'E1'};{'V1'}];
-kn=3;
-fname = ['out.S2f.0'];
-tstr = 'S2f';
+%path = '../CaseS1/'; 
+%para = [{'p1'}];
+%kn=1;
+%fname = ['out.S1f.0'];
+%tstr = 'S1f';
 
-path = '../CaseS3/'; 
-para = [{'p1'}];
-kn=1;
-fname = ['out.S3f.0'];
-tstr = 'S3f';
+%path = '../CaseS2/'; 
+%para = [{'p1'};{'E1'};{'V1'}];
+%kn=3;
+%fname = ['out.S2f.0'];
+%tstr = 'S2f';
 
-path = '../CaseS3/'; 
-para = [{'p1'}];
-kn=1;
-fname = ['out.S3fX.0'];
-tstr = 'S3fX';
+%path = '../CaseS3/'; 
+%para = [{'p1'}];
+%kn=1;
+%fname = ['out.S3f.0'];
+%tstr = 'S3f';
 
-path = '../CaseS4/'; 
-para = [{'p1'};{'E1'}];
-kn=2;
-fname = ['out.S4f.noX.0'];
-tstr = 'S4f (no X)';
+%path = '../CaseS3/'; 
+%para = [{'p1'}];
+%kn=1;
+%fname = ['out.S3fX.0'];
+%tstr = 'S3fX';
 
-path = '../CaseS4/'; 
-para = [{'p1'};{'E1'}];
-kn=2;
-fname = ['out.S4fX.0'];
-tstr = 'S4fX';
+%path = '../CaseS4/'; 
+%para = [{'p1'};{'E1'}];
+%kn=2;
+%fname = ['out.S4f.noX.0'];
+%tstr = 'S4f (no X)';
 
-path = '../CaseS4/'; 
-para = [{'p1'};{'E1'}];
-kn=2;
-fname = ['out.S4fX-wb.0'];
-tstr = 'S4fX (wb)';
+%path = '../CaseS4/'; 
+%para = [{'p1'};{'E1'}];
+%kn=2;
+%fname = ['out.S4fX.0'];
+%tstr = 'S4fX';
 
-path = '../CaseS5/'; 
-para = [{'p5'};{'n5'}];
-kn=2;
-fname = ['out.S5g.0'];
-tstr = 'S5g';
+%path = '../CaseS4/'; 
+%para = [{'p1'};{'E1'}];
+%kn=2;
+%fname = ['out.S4fX-wb.0'];
+%tstr = 'S4fX (wb)';
 
-path = '../CaseS5/'; 
-para = [{'n3'}];
-kn=1;
-fname = ['out.S5s.0'];
-tstr = 'S5s';
+%path = '../CaseS5/'; 
+%para = [{'p5'};{'n5'}];
+%kn=2;
+%fname = ['out.S5g.0'];
+%tstr = 'S5g';
 
-path = '../CaseS6/'; 
-para = [{'n3'};{'E3'};{'V3'}];
-kn=3;
-fname = ['out.S6s.0'];
-tstr = 'S6s';
+%path = '../CaseS5/'; 
+%para = [{'n3'}];
+%kn=1;
+%fname = ['out.S5s.0'];
+%tstr = 'S5s';
 
-path = '../CaseS7/'; 
-para = [{'p1'}];
-kn=1;
-fname = ['out.S7f.0'];
-tstr = 'S7f';
+%path = '../CaseS6/'; 
+%para = [{'n3'};{'E3'};{'V3'}];
+%kn=3;
+%fname = ['out.S6s.0'];
+%tstr = 'S6s';
 
-path = '../CaseS7/'; 
-para = [{'n3'}];
-kn=1;
-fname = ['out.S7s.0'];
-tstr = 'S7s';
+%path = '../CaseS7/'; 
+%para = [{'p1'}];
+%kn=1;
+%fname = ['out.S7f.0'];
+%tstr = 'S7f';
 
-path = '../CaseS7/'; 
-para = [{'p5'};{'n5'}];
-kn=2;
-fname = ['out.S7g.0'];
-tstr = 'S7g';
+%path = '../CaseS7/'; 
+%para = [{'n3'}];
+%kn=1;
+%fname = ['out.S7s.0'];
+%tstr = 'S7s';
 
-path = '../CaseS7/'; 
-para = [{'p1'};{'n3'}];
-kn=2;
-fname = ['out.S7fs.0'];
-tstr = 'S7fs';
+%path = '../CaseS7/'; 
+%para = [{'p5'};{'n5'}];
+%kn=2;
+%fname = ['out.S7g.0'];
+%tstr = 'S7g';
+
+%path = '../CaseS7/'; 
+%para = [{'p1'};{'n3'}];
+%kn=2;
+%fname = ['out.S7fs.0'];
+%tstr = 'S7fs';
 
 path = '../CaseS8/'; 
 para = [{'p1'};{'E1'};{'V1'};{'n3'};{'E3'};{'V3'}];
@@ -114,17 +120,21 @@ fname = ['out.S8fsX.sticky.0'];
 tstr = 'S8fsX (sticky)'; % w/ sticky parameters 
 %  does not converge too well. lag ~ 8e3. 
                                  
-path = '../CaseS9/'; 
-para = [{'r4'};{'n4'};{'E4'};{'V4'};{'p2'};{'r2'};{'E2'};{'V2'}];
-kn=8;
-fname = ['out.S9fsX.0'];
-tstr = 'S9fsX\_wet'; % resample at 6000.
-    
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%path = '../CaseS9/'; 
+%para = [{'r4'};{'n4'};{'E4'};{'V4'};{'p2'};{'r2'};{'E2'};{'V2'}];
+%kn=8;
+%fname = ['out.S9fsX.0'];
+%tstr = 'S9fsX\_wet'; % resample at 6000.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 M = 10e3; %2e3; <-- no. of lags
 %
-outm = load([path fname '.dat']);
+outm = load([path odir fname '.dat']);
 outm(:,[1:3])=[];
 
 ACF = zeros(M,kn+1);

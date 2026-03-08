@@ -2,7 +2,7 @@
 
 #set up execution
 EXEC=../src/labmc
-dat=dataS4.dat
+dat=input/dataS4.dat
 
 #foreach seed (0 1 2 3 4 5 6 7 8 9)
 for seed in 0 #1 2 
@@ -16,7 +16,7 @@ do
 
     $EXEC -Di$dat -d1 -M1000000/$dn/200/100 -V -R$seed \
 	   -Pa0/0/-5/5/0/1000/0/0 \
-	   > out.S4fX.$seed.dat
+	   > output/out.S4fX.$seed.dat
     sleep 1
 done
 

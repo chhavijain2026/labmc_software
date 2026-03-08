@@ -2,8 +2,8 @@
 
 #set up execution
 EXEC=../src/labmc
-dat=dataS3.dat
-dat2=dataS3.noX.dat
+dat=input/dataS3.dat
+dat2=input/dataS3.noX.dat
 
 awk '{$NF=1; print }' $dat > $dat2
 
@@ -19,7 +19,7 @@ do
 
     $EXEC -Di$dat2 -d1 -M1000000/$dn/200/100 -V -R$seed \
 	   -Pa0/0/-5/5/0/0/0/0 \
-	   > out.S3f.$seed.dat
+	   > output/out.S3f.$seed.dat
     sleep 1
 done
 

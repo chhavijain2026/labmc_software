@@ -66,6 +66,9 @@ grey2 = [0.5 0.5 0.5];
 ci = 1; % plot confidence intervals or not (90% & 50%)
 printresults = 0; % write means etc. or not
 
+idir = 'input/';
+odir = 'output/';
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Data 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,7 +140,7 @@ end
 % Simply load that saved file instead. 
 % % % % % % % % % % % % % % % 
 % resample MCMC outputs from all parallel runs & compile into one
-outm = combine_data(path,files,resample); % resampled & compiled data
+outm = combine_data([path odir],files,resample); % resampled & compiled data
 % remove models for which the scaling coefficients are nan, inf, or 0
 for a=0:An-1
     ff = find(isnan(outm(:,end-a)) | isinf(outm(:,end-a)) | outm(:,end-a)==0);
@@ -149,7 +152,7 @@ outm(f4,:) = [];
 clearvars ff f4
 if printresults ==1
     % write resampled file
-    fn=fopen([path outf 'resampled.dat'],'w');
+    fn=fopen([path odir outf 'resampled.dat'],'w');
     fspec = '%d %8.6e %8.6e';
     for i=4:length(outm(1,:))
         fspec = [fspec ' %8.6e'];
@@ -161,7 +164,7 @@ end
 % % % % % % % % % % % % % % % % % % % 
 
 % % % % uncomment if the resampled MCMC output has been saved.
-% outm=load([path outf 'resampled.dat']);
+% outm=load([path odir outf 'resampled.dat']);
 % % % uncomment if the resampled MCMC output has been saved.
 
 Nout = length(outm(:,1));
@@ -242,7 +245,7 @@ end
 
 % draw normalized datafit figures
 % read observed data
-obsdata = load([path dataf]);
+obsdata = load([path idir dataf]);
 [dn,colobs] = size(obsdata);
 T=obsdata(:,1);
 dT=obsdata(:,2);
@@ -275,7 +278,7 @@ else
     obsdata = [obsdata(:,1:12) runindex];
 end
 if Xn~=XXn %Xn==0 && XXn>0
-    obsdatax = load([path dataf2]);
+    obsdatax = load([path idir dataf2]);
     runsorig=obsdatax(:,end);
     clearvars obsdatax
     uniqruns = unique(runsorig,'stable');
