@@ -1,4 +1,0 @@
-Inversion (out.S7s..dat) of data (dataS7.dat): correlations, means, std
-			n3		log10A3		mean +/- std
- n3		 1.000		-0.999 		 0.764 +/-  0.038
-log10A3		-0.999		 1.000 		-6.245 +/-  0.064

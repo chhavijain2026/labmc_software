@@ -1,5 +1,0 @@
-Inversion (out.S7g..dat) of data (dataS7.dat): correlations, means, std
-			p5		n5		log10A5		mean +/- std
- p5		 1.000		 0.491		 0.414 		 2.949 +/-  0.093
- n5		 0.491		 1.000		-0.581 		 2.287 +/-  0.072
-log10A5		 0.414		-0.581		 1.000 		-5.367 +/-  0.122
