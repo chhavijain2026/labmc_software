@@ -1,4 +1,4 @@
-# Makefile
+# Makefile - original Makefile, suited for Unix and Linux
 
 # for parallel implementation (with MPI)
 # comment for serial implementation
